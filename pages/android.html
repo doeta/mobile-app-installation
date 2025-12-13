@@ -25,15 +25,100 @@
           </div>
         </header>
 
-        <div class="step">
-          <h2><span class="step-number">1</span> Download Android Studio</h2>
+        <div
+          class="prerequisites"
+          style="
+            margin-bottom: 3rem;
+            background-color: var(--bg-color);
+            padding: 2rem;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color);
+          "
+        >
+          <h2 style="margin-bottom: 1rem">Persiapan Sebelum Instalasi</h2>
+          <p style="margin-bottom: 1.5rem">
+            Sebelum kita membahas cara install Android Studio di Windows atau
+            sistem operasi lainnya, ada beberapa hal yang harus kamu siapkan:
+          </p>
+
+          <h3
+            style="
+              margin-top: 1.5rem;
+              margin-bottom: 0.5rem;
+              color: var(--primary-dark);
+              font-size: 1.1rem;
+            "
+          >
+            1. Spesifikasi Minimum Laptop/PC
+          </h3>
           <p>
-            Kunjungi situs resmi
+            Agar Android Studio bisa berjalan dengan lancar, berikut adalah
+            spesifikasi minimum yang disarankan:
+          </p>
+          <ul
+            style="
+              list-style-type: disc;
+              margin-left: 1.5rem;
+              margin-bottom: 1rem;
+              color: var(--text-light);
+            "
+          >
+            <li>
+              <strong>Sistem operasi:</strong> Windows 10/11 (64-bit), macOS
+              (Chip Intel/Apple Silicon), atau Linux.
+            </li>
+            <li>
+              <strong>RAM:</strong> Minimal 8 GB (lebih disarankan 16 GB).
+            </li>
+            <li>
+              <strong>Penyimpanan:</strong> Minimal tersedia 8 GB (lebih
+              disarankan SSD).
+            </li>
+            <li><strong>Resolusi layar:</strong> Minimum 1280 x 800.</li>
+          </ul>
+
+          <h3
+            style="
+              margin-top: 1.5rem;
+              margin-bottom: 0.5rem;
+              color: var(--primary-dark);
+              font-size: 1.1rem;
+            "
+          >
+            2. JDK (Java Development Kit)
+          </h3>
+          <p>
+            Android Studio membutuhkan Java untuk menjalankan environment-nya.
+            Namun sejak beberapa versi terakhir, JDK sudah disertakan otomatis
+            saat instalasi, jadi kamu tidak perlu menginstal secara terpisah.
+          </p>
+
+          <h3
+            style="
+              margin-top: 1.5rem;
+              margin-bottom: 0.5rem;
+              color: var(--primary-dark);
+              font-size: 1.1rem;
+            "
+          >
+            3. Koneksi Internet Stabil
+          </h3>
+          <p>
+            Selama proses instalasi dan konfigurasi SDK, Android Studio akan
+            mengunduh berbagai komponen penting. Pastikan kamu memiliki koneksi
+            internet yang stabil agar proses berjalan lancar.
+          </p>
+        </div>
+
+        <div class="step">
+          <h2><span class="step-number">1</span> Unduh Installer</h2>
+          <p>
+            Kunjungi situs resmi Android Studio di
             <a href="https://developer.android.com/studio" target="_blank"
               >developer.android.com/studio</a
-            >
-            dan unduh versi terbaru Android Studio (saat ini Ladybug atau
-            Koala).
+            >. Klik tombol <strong>Download Android Studio</strong> dan pilih
+            versi untuk Windows. Setujui lisensi, lalu simpan file .exe di
+            komputer kamu.
           </p>
           <img
             src="../images/android-1-download.png"
@@ -43,11 +128,20 @@
         </div>
 
         <div class="step">
-          <h2><span class="step-number">2</span> Proses Instalasi</h2>
+          <h2><span class="step-number">2</span> Jalankan Installer</h2>
           <p>
-            Jalankan installer yang telah diunduh. Pastikan untuk mencentang
-            "Android Virtual Device" saat diminta komponen apa yang ingin
-            diinstall.
+            Setelah proses unduh selesai, klik dua kali file installer tersebut.
+            Akan muncul wizard instalasi Android Studio.
+          </p>
+        </div>
+
+        <div class="step">
+          <h2><span class="step-number">3</span> Ikuti Panduan Instalasi</h2>
+          <p>
+            Klik <strong>Next</strong> hingga kamu masuk ke bagian pemilihan
+            komponen. Biarkan opsi default tercentang (Android Studio dan
+            Android Virtual Device), lalu klik <strong>Next</strong> dan
+            “Install”.
           </p>
           <img
             src="../images/android-2-install.png"
@@ -57,11 +151,30 @@
         </div>
 
         <div class="step">
-          <h2><span class="step-number">3</span> Konfigurasi SDK</h2>
+          <h2>
+            <span class="step-number">4</span> Tunggu Hingga Instalasi Selesai
+          </h2>
           <p>
-            Setelah instalasi selesai, buka Android Studio. Setup Wizard akan
-            berjalan untuk mengunduh Android SDK terbaru. Pastikan koneksi
-            internet stabil.
+            Proses ini bisa memakan waktu beberapa menit tergantung spesifikasi
+            laptop kamu.
+          </p>
+        </div>
+
+        <div class="step">
+          <h2><span class="step-number">5</span> Buka Android Studio</h2>
+          <p>
+            Setelah instalasi selesai, klik <strong>Finish</strong> untuk
+            membuka Android Studio. Saat pertama kali dibuka, kamu akan diminta
+            mengatur beberapa konfigurasi awal.
+          </p>
+        </div>
+
+        <div class="step">
+          <h2><span class="step-number">6</span> Setup SDK dan Emulator</h2>
+          <p>
+            Wizard konfigurasi akan muncul, pilih
+            <strong>Standard</strong> untuk settingan default. Kemudian Android
+            Studio akan mengunduh SDK, platform tools, dan emulator.
           </p>
           <img
             src="../images/android-3-sdk.png"
@@ -71,7 +184,15 @@
         </div>
 
         <div class="step">
-          <h2><span class="step-number">4</span> Membuat Project Baru</h2>
+          <h2><span class="step-number">7</span> Selesai!</h2>
+          <p>
+            Setelah semuanya selesai, kamu akan dibawa ke tampilan utama Android
+            Studio dan bisa mulai membuat project pertamamu.
+          </p>
+        </div>
+
+        <div class="step">
+          <h2><span class="step-number">8</span> Membuat Project Baru</h2>
           <p>
             Klik "New Project". Pilih template "Empty Views Activity" (untuk
             XML) atau "Empty Activity" (untuk Jetpack Compose). Untuk tutorial
@@ -85,7 +206,7 @@
         </div>
 
         <div class="step">
-          <h2><span class="step-number">5</span> Konfigurasi Project</h2>
+          <h2><span class="step-number">9</span> Konfigurasi Project</h2>
           <p>Isi detail project sebagai berikut:</p>
           <ul>
             <li><strong>Name:</strong> HelloWorld</li>
@@ -101,7 +222,7 @@
         </div>
 
         <div class="step">
-          <h2><span class="step-number">6</span> Menjalankan Aplikasi</h2>
+          <h2><span class="step-number">10</span> Menjalankan Aplikasi</h2>
           <p>
             Tunggu proses Gradle sync selesai. Buka file
             <code>MainActivity.kt</code>. Anda akan melihat kode dasar "Hello
