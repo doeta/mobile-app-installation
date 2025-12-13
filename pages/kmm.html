@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial Instalasi KMM - DevSetup</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar injected by script.js -->
+
+    <main class="container section">
+      <article class="tutorial-content">
+        <header class="tutorial-header">
+          <h1>Instalasi Kotlin Multiplatform (KMM)</h1>
+          <div class="tutorial-meta">
+            <span>Platform: Multiplatform (Kotlin)</span> &bull;
+            <span>Waktu: ~40 Menit</span>
+          </div>
+        </header>
+
+        <div class="step">
+          <h2><span class="step-number">1</span> Prasyarat</h2>
+          <p>Pastikan Anda sudah menginstal:</p>
+          <ul>
+            <li>Android Studio (versi terbaru)</li>
+            <li>XCode (jika menggunakan macOS untuk target iOS)</li>
+            <li>JDK 17 atau lebih baru</li>
+          </ul>
+          <img
+            src="../images/kmm-1-prereq.png"
+            alt="Prasyarat KMM"
+            class="step-image"
+          />
+        </div>
+
+        <div class="step">
+          <h2><span class="step-number">2</span> Install Plugin KMP</h2>
+          <p>
+            Buka Android Studio, masuk ke
+            <strong>Settings/Preferences > Plugins</strong>. Cari dan install
+            plugin <strong>Kotlin Multiplatform</strong> (sebelumnya bernama
+            Kotlin Multiplatform Mobile).
+          </p>
+          <img
+            src="../images/kmm-2-plugin.png"
+            alt="Plugin Kotlin Multiplatform"
+            class="step-image"
+          />
+        </div>
+
+        <div class="step">
+          <h2><span class="step-number">3</span> KDoctor</h2>
+          <p>
+            Untuk memastikan lingkungan siap, disarankan menggunakan tool
+            command line <code>kdoctor</code> (hanya macOS). Jalankan di
+            terminal:
+          </p>
+          <pre><code>brew install kdoctor
+kdoctor</code></pre>
+          <p>Perbaiki masalah yang dilaporkan oleh kdoctor.</p>
+          <img
+            src="../images/kmm-3-kdoctor.png"
+            alt="Output KDoctor"
+            class="step-image"
+          />
+        </div>
+
+        <div class="step">
+          <h2><span class="step-number">4</span> Membuat Project Baru</h2>
+          <p>
+            Di Android Studio, pilih <strong>New Project</strong>. Di panel
+            kiri, pilih <strong>Kotlin Multiplatform</strong>. Pilih template
+            <strong>Kotlin Multiplatform App</strong>.
+          </p>
+          <img
+            src="../images/kmm-4-new.png"
+            alt="Template KMM di Android Studio"
+            class="step-image"
+          />
+        </div>
+
+        <div class="step">
+          <h2><span class="step-number">5</span> Konfigurasi Project</h2>
+          <p>
+            Beri nama project <code>HelloWorldKMM</code>. Pastikan opsi untuk
+            iOS framework distribution dipilih (biasanya Regular framework atau
+            CocoaPods).
+          </p>
+          <img
+            src="../images/kmm-5-config.png"
+            alt="Konfigurasi Project KMM"
+            class="step-image"
+          />
+        </div>
+
+        <div class="step">
+          <h2><span class="step-number">6</span> Struktur Project & Run</h2>
+          <p>
+            Project akan memiliki folder <code>androidApp</code>,
+            <code>iosApp</code>, dan <code>shared</code>. Logika bisnis ditulis
+            di <code>shared</code>.
+          </p>
+          <p>
+            Pilih konfigurasi run <strong>androidApp</strong> untuk menjalankan
+            di Android Emulator. Untuk iOS, buka
+            <code>iosApp.xcodeproj</code> di XCode atau pilih konfigurasi
+            <strong>iosApp</strong> di Android Studio (jika plugin mendukung).
+          </p>
+          <pre><code>// shared/src/commonMain/kotlin/Greeting.kt
+class Greeting {
+    private val platform: Platform = getPlatform()
+
+    fun greet(): String {
+        return "Hello, ${platform.name}!"
+    }
+}</code></pre>
+          <img
+            src="../images/kmm-6-run.png"
+            alt="Aplikasi KMM berjalan"
+            class="step-image"
+          />
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Built with ❤️ by dutaadips.</p>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

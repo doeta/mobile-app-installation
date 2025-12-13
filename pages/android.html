@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial Instalasi Android Studio - DevSetup</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar injected by script.js -->
+
+    <main class="container section">
+      <article class="tutorial-content">
+        <header class="tutorial-header">
+          <h1>Instalasi Android Studio & Project HelloWorld</h1>
+          <div class="tutorial-meta">
+            <span>Platform: Android (Kotlin)</span> &bull;
+            <span>Waktu: ~30 Menit</span>
+          </div>
+        </header>
+
+        <div class="step">
+          <h2><span class="step-number">1</span> Download Android Studio</h2>
+          <p>
+            Kunjungi situs resmi
+            <a href="https://developer.android.com/studio" target="_blank"
+              >developer.android.com/studio</a
+            >
+            dan unduh versi terbaru Android Studio (saat ini Ladybug atau
+            Koala).
+          </p>
+          <img
+            src="../images/android-1-download.png"
+            alt="Halaman Download Android Studio"
+            class="step-image"
+          />
+        </div>
+
+        <div class="step">
+          <h2><span class="step-number">2</span> Proses Instalasi</h2>
+          <p>
+            Jalankan installer yang telah diunduh. Pastikan untuk mencentang
+            "Android Virtual Device" saat diminta komponen apa yang ingin
+            diinstall.
+          </p>
+          <img
+            src="../images/android-2-install.png"
+            alt="Wizard Instalasi Android Studio"
+            class="step-image"
+          />
+        </div>
+
+        <div class="step">
+          <h2><span class="step-number">3</span> Konfigurasi SDK</h2>
+          <p>
+            Setelah instalasi selesai, buka Android Studio. Setup Wizard akan
+            berjalan untuk mengunduh Android SDK terbaru. Pastikan koneksi
+            internet stabil.
+          </p>
+          <img
+            src="../images/android-3-sdk.png"
+            alt="SDK Manager Android Studio"
+            class="step-image"
+          />
+        </div>
+
+        <div class="step">
+          <h2><span class="step-number">4</span> Membuat Project Baru</h2>
+          <p>
+            Klik "New Project". Pilih template "Empty Views Activity" (untuk
+            XML) atau "Empty Activity" (untuk Jetpack Compose). Untuk tutorial
+            ini kita gunakan <strong>Empty Activity</strong>.
+          </p>
+          <img
+            src="../images/android-4-newproject.png"
+            alt="Dialog New Project"
+            class="step-image"
+          />
+        </div>
+
+        <div class="step">
+          <h2><span class="step-number">5</span> Konfigurasi Project</h2>
+          <p>Isi detail project sebagai berikut:</p>
+          <ul>
+            <li><strong>Name:</strong> HelloWorld</li>
+            <li><strong>Package name:</strong> com.example.helloworld</li>
+            <li><strong>Language:</strong> Kotlin</li>
+            <li><strong>Minimum SDK:</strong> API 24 (Android 7.0)</li>
+          </ul>
+          <img
+            src="../images/android-5-config.png"
+            alt="Konfigurasi Project HelloWorld"
+            class="step-image"
+          />
+        </div>
+
+        <div class="step">
+          <h2><span class="step-number">6</span> Menjalankan Aplikasi</h2>
+          <p>
+            Tunggu proses Gradle sync selesai. Buka file
+            <code>MainActivity.kt</code>. Anda akan melihat kode dasar "Hello
+            Android". Klik tombol <strong>Run</strong> (segitiga hijau) di
+            toolbar atas untuk menjalankan di Emulator.
+          </p>
+          <pre><code>class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            HelloWorldTheme {
+                Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
+                    Greeting("World")
+                }
+            }
+        }
+    }
+}</code></pre>
+          <img
+            src="../images/android-6-run.png"
+            alt="Aplikasi HelloWorld berjalan di Emulator"
+            class="step-image"
+          />
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Built with ❤️ by dutaadips.</p>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

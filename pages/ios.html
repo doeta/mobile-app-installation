@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial Instalasi XCode (iOS) - DevSetup</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar injected by script.js -->
+
+    <main class="container section">
+      <article class="tutorial-content">
+        <header class="tutorial-header">
+          <h1>Instalasi XCode & Project HelloWorld</h1>
+          <div class="tutorial-meta">
+            <span>Platform: iOS (Swift)</span> &bull;
+            <span>Waktu: ~45 Menit</span> &bull; <span>Syarat: macOS</span>
+          </div>
+        </header>
+
+        <div class="step">
+          <h2><span class="step-number">1</span> Download XCode</h2>
+          <p>
+            Buka <strong>App Store</strong> di Mac Anda dan cari "Xcode". Klik
+            tombol <strong>Get</strong> atau <strong>Install</strong>. Ukurannya
+            cukup besar (lebih dari 10GB), jadi pastikan koneksi internet Anda
+            stabil.
+          </p>
+          <img
+            src="../images/ios-1-appstore.png"
+            alt="XCode di App Store"
+            class="step-image"
+          />
+        </div>
+
+        <div class="step">
+          <h2>
+            <span class="step-number">2</span> Instalasi Komponen Tambahan
+          </h2>
+          <p>
+            Setelah selesai diunduh, buka XCode. Saat pertama kali dibuka, XCode
+            akan meminta izin untuk menginstal komponen tambahan. Masukkan
+            password Mac Anda dan biarkan proses selesai.
+          </p>
+          <img
+            src="../images/ios-2-components.png"
+            alt="Instalasi Komponen XCode"
+            class="step-image"
+          />
+        </div>
+
+        <div class="step">
+          <h2><span class="step-number">3</span> Membuat Project Baru</h2>
+          <p>
+            Di layar Welcome to Xcode, pilih
+            <strong>Create a new Xcode project</strong>.
+          </p>
+          <img
+            src="../images/ios-3-welcome.png"
+            alt="Welcome to Xcode Screen"
+            class="step-image"
+          />
+        </div>
+
+        <div class="step">
+          <h2><span class="step-number">4</span> Memilih Template</h2>
+          <p>
+            Pilih tab <strong>iOS</strong>, lalu pilih <strong>App</strong> di
+            bagian Application. Klik Next.
+          </p>
+          <img
+            src="../images/ios-4-template.png"
+            alt="Pilih Template App iOS"
+            class="step-image"
+          />
+        </div>
+
+        <div class="step">
+          <h2><span class="step-number">5</span> Konfigurasi Project</h2>
+          <p>Isi detail project:</p>
+          <ul>
+            <li><strong>Product Name:</strong> HelloWorld</li>
+            <li><strong>Organization Identifier:</strong> com.example</li>
+            <li><strong>Interface:</strong> SwiftUI (atau Storyboard)</li>
+            <li><strong>Language:</strong> Swift</li>
+          </ul>
+          <img
+            src="../images/ios-5-config.png"
+            alt="Konfigurasi Project iOS"
+            class="step-image"
+          />
+        </div>
+
+        <div class="step">
+          <h2><span class="step-number">6</span> Menjalankan Aplikasi</h2>
+          <p>
+            XCode akan membuka editor. Di file <code>ContentView.swift</code>,
+            Anda akan melihat kode SwiftUI default. Pilih Simulator (misal
+            iPhone 15) di bagian atas, lalu klik tombol <strong>Play</strong>.
+          </p>
+          <pre><code>import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        VStack {
+            Image(systemName: "globe")
+                .imageScale(.large)
+                .foregroundStyle(.tint)
+            Text("Hello, world!")
+        }
+        .padding()
+    }
+}</code></pre>
+          <img
+            src="../images/ios-6-run.png"
+            alt="Simulator iPhone menjalankan HelloWorld"
+            class="step-image"
+          />
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Built with ❤️ by dutaadips.</p>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

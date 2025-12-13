@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Instalasi React Native - DevSetup</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar injected by script.js -->
+
+    <main class="container section">
+        <article class="tutorial-content">
+            <header class="tutorial-header">
+                <h1>Instalasi React Native & Project HelloWorld</h1>
+                <div class="tutorial-meta">
+                    <span>Platform: Multiplatform (JS/TS)</span> &bull; <span>Waktu: ~20 Menit</span>
+                </div>
+            </header>
+
+            <div class="step">
+                <h2><span class="step-number">1</span> Instalasi Node.js</h2>
+                <p>React Native membutuhkan Node.js. Unduh versi LTS dari <a href="https://nodejs.org" target="_blank">nodejs.org</a> dan install.</p>
+                <img src="../images/rn-1-node.png" alt="Website Node.js" class="step-image">
+            </div>
+
+            <div class="step">
+                <h2><span class="step-number">2</span> Setup Lingkungan (React Native CLI)</h2>
+                <p>Untuk pengembangan native penuh, kita akan menggunakan React Native CLI. Anda perlu menginstal JDK (Java Development Kit) dan Android Studio (lihat tutorial Android). Pastikan variabel environment <code>ANDROID_HOME</code> sudah diset.</p>
+                <img src="../images/rn-2-env.png" alt="Environment Variables Windows" class="step-image">
+            </div>
+
+            <div class="step">
+                <h2><span class="step-number">3</span> Membuat Project Baru</h2>
+                <p>Buka terminal atau command prompt. Jalankan perintah berikut untuk membuat project baru:</p>
+                <pre><code>npx react-native@latest init HelloWorld</code></pre>
+                <p>Ketik <code>y</code> jika diminta untuk menginstal paket <code>create-react-native-app</code>.</p>
+                <img src="../images/rn-3-init.png" alt="Terminal menjalankan npx react-native init" class="step-image">
+            </div>
+
+            <div class="step">
+                <h2><span class="step-number">4</span> Menjalankan Metro Bundler</h2>
+                <p>Masuk ke direktori project:</p>
+                <pre><code>cd HelloWorld
+npm start</code></pre>
+                <p>Ini akan menjalankan Metro Bundler yang bertugas mem-bundle JavaScript code.</p>
+                <img src="../images/rn-4-metro.png" alt="Metro Bundler berjalan" class="step-image">
+            </div>
+
+            <div class="step">
+                <h2><span class="step-number">5</span> Menjalankan di Android</h2>
+                <p>Buka terminal baru (biarkan Metro berjalan). Pastikan emulator Android sudah berjalan atau device terhubung. Jalankan:</p>
+                <pre><code>npm run android</code></pre>
+                <img src="../images/rn-5-run-android.png" alt="Aplikasi berjalan di Android" class="step-image">
+            </div>
+
+            <div class="step">
+                <h2><span class="step-number">6</span> Edit App.tsx</h2>
+                <p>Buka folder project di VS Code. Edit file <code>App.tsx</code> untuk mengubah teks menjadi "Hello World".</p>
+                <pre><code>import React from 'react';
+import { Text, View } from 'react-native';
+
+const App = () => {
+  return (
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <Text>Hello, World!</Text>
+    </View>
+  );
+}
+export default App;</code></pre>
+                <img src="../images/rn-6-code.png" alt="VS Code editing App.tsx" class="step-image">
+            </div>
+
+        </article>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Built with ❤️ by dutaadips.</p>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

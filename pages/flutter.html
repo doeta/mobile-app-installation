@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial Instalasi Flutter - DevSetup</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar injected by script.js -->
+
+    <main class="container section">
+      <article class="tutorial-content">
+        <header class="tutorial-header">
+          <h1>Instalasi Flutter & Project HelloWorld</h1>
+          <div class="tutorial-meta">
+            <span>Platform: Multiplatform (Dart)</span> &bull;
+            <span>Waktu: ~30 Menit</span>
+          </div>
+        </header>
+
+        <div class="step">
+          <h2><span class="step-number">1</span> Download Flutter SDK</h2>
+          <p>
+            Unduh Flutter SDK dari situs resmi
+            <a
+              href="https://flutter.dev/docs/get-started/install"
+              target="_blank"
+              >flutter.dev</a
+            >. Ekstrak file zip ke lokasi yang diinginkan (misal:
+            <code>C:\src\flutter</code>).
+          </p>
+          <img
+            src="../images/flutter-1-download.png"
+            alt="Download Flutter SDK"
+            class="step-image"
+          />
+        </div>
+
+        <div class="step">
+          <h2><span class="step-number">2</span> Update Path</h2>
+          <p>
+            Tambahkan folder <code>flutter/bin</code> ke Environment Variable
+            <code>PATH</code> sistem Anda agar perintah
+            <code>flutter</code> bisa dijalankan dari mana saja.
+          </p>
+          <img
+            src="../images/flutter-2-path.png"
+            alt="Edit Environment Variables"
+            class="step-image"
+          />
+        </div>
+
+        <div class="step">
+          <h2><span class="step-number">3</span> Flutter Doctor</h2>
+          <p>Buka terminal dan jalankan perintah:</p>
+          <pre><code>flutter doctor</code></pre>
+          <p>
+            Perintah ini akan mengecek dependensi yang kurang. Ikuti instruksi
+            yang muncul (misal: install Android Studio, setujui lisensi Android
+            SDK).
+          </p>
+          <img
+            src="../images/flutter-3-doctor.png"
+            alt="Output Flutter Doctor"
+            class="step-image"
+          />
+        </div>
+
+        <div class="step">
+          <h2><span class="step-number">4</span> Install Plugin VS Code</h2>
+          <p>
+            Buka VS Code, masuk ke tab Extensions, cari dan install ekstensi
+            <strong>Flutter</strong> (ini akan otomatis menginstall ekstensi
+            Dart).
+          </p>
+          <img
+            src="../images/flutter-4-vscode.png"
+            alt="Ekstensi Flutter di VS Code"
+            class="step-image"
+          />
+        </div>
+
+        <div class="step">
+          <h2><span class="step-number">5</span> Membuat Project Baru</h2>
+          <p>
+            Di VS Code, tekan <code>Ctrl+Shift+P</code> (Command Palette), ketik
+            "Flutter: New Project", pilih "Application", lalu pilih folder
+            penyimpanan dan beri nama project <code>helloworld</code>.
+          </p>
+          <img
+            src="../images/flutter-5-new.png"
+            alt="Membuat project Flutter baru"
+            class="step-image"
+          />
+        </div>
+
+        <div class="step">
+          <h2><span class="step-number">6</span> Menjalankan Aplikasi</h2>
+          <p>
+            Buka <code>lib/main.dart</code>. Ubah kode sesuai kebutuhan atau
+            biarkan default counter app. Pilih device di status bar kanan bawah,
+            lalu tekan F5 untuk debug.
+          </p>
+          <pre><code>import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MainApp());
+}
+
+class MainApp extends StatelessWidget {
+  const MainApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Text('Hello World!'),
+        ),
+      ),
+    );
+  }
+}</code></pre>
+          <img
+            src="../images/flutter-6-run.png"
+            alt="Aplikasi Flutter berjalan"
+            class="step-image"
+          />
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Built with ❤️ by dutaadips.</p>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
