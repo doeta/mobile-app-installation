@@ -333,7 +333,7 @@ ul {
 }
 
 .step-image {
-  width: 100%;
+  width: 50%;
   height: auto;
   border-radius: var(--radius);
   border: 1px solid var(--border-color);
@@ -629,4 +629,80 @@ footer {
   .dropdown.active .dropdown-content {
     display: block;
   }
+}
+
+/* Utility Classes for Tutorial Content */
+.callout {
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  margin: 1.5rem 0;
+  border-left: 4px solid;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
+
+.callout-info {
+  border-left-color: var(--primary-color);
+  background-color: rgba(245, 158, 11, 0.05);
+}
+
+.callout-warning {
+  border-left-color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.05);
+}
+
+.callout-tip {
+  border-left-color: var(--secondary-color);
+  background-color: rgba(251, 191, 36, 0.05);
+}
+
+.callout-success {
+  border-left-color: #10b981;
+  background-color: rgba(16, 185, 129, 0.05);
+}
+
+.callout-title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.list-check {
+  list-style: none;
+  padding: 0;
+}
+
+.list-check li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.list-check li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.list-disc {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.code-inline {
+  background-color: #f3f4f6;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: monospace;
+  color: var(--primary-dark);
+}
+
+[data-theme="dark"] .code-inline {
+  background-color: #374151;
+  color: var(--primary-color);
 }
