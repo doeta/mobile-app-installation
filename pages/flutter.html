@@ -26,87 +26,143 @@
         </header>
 
         <div class="step">
-          <h2><span class="step-number">1</span> Download Flutter SDK</h2>
+          <h2>
+            <span class="step-number">1</span> Download & Ekstrak Flutter SDK
+          </h2>
           <p>
-            Unduh Flutter SDK dari situs resmi
+            Buka browser, ke
             <a
-              href="https://flutter.dev/docs/get-started/install"
+              href="https://storage.googleapis.com/flutter_infra_release/releases/stable/windows/flutter_windows_3.16.5-stable.zip"
               target="_blank"
-              >flutter.dev</a
-            >. Ekstrak file zip ke lokasi yang diinginkan (misal:
-            <code>C:\src\flutter</code>).
+              >link ini</a
+            >
+            (atau buka
+            <a href="https://flutter.dev" target="_blank">flutter.dev</a> > Get
+            Started > Windows). Download file .zip Flutter SDK.
           </p>
-          <img
-            src="../images/flutter-1-download.png"
-            alt="Download Flutter SDK"
-            class="step-image"
-          />
-        </div>
-
-        <div class="step">
-          <h2><span class="step-number">2</span> Update Path</h2>
           <p>
-            Tambahkan folder <code>flutter/bin</code> ke Environment Variable
-            <code>PATH</code> sistem Anda agar perintah
-            <code>flutter</code> bisa dijalankan dari mana saja.
+            <strong>PENTING:</strong> Jangan ekstrak di
+            <code>C:\Program Files</code>. Windows sering memblokir izin di
+            situ. Buat folder baru, misal di <code>C:\src\flutter</code>.
+            Ekstrak isi zip tadi ke sana.
           </p>
           <img
-            src="../images/flutter-2-path.png"
-            alt="Edit Environment Variables"
+            src="../images/flutter/1.png"
+            alt="Ekstrak folder Flutter"
             class="step-image"
           />
         </div>
 
         <div class="step">
-          <h2><span class="step-number">3</span> Flutter Doctor</h2>
-          <p>Buka terminal dan jalankan perintah:</p>
+          <h2>
+            <span class="step-number">2</span> Setting Environment Variable
+            (Wajib)
+          </h2>
+          <p>
+            Agar perintah <code>flutter</code> bisa dikenali di terminal mana
+            saja.
+          </p>
+          <ul
+            class="list-disc"
+            style="margin-left: 1.5rem; margin-bottom: 1rem"
+          >
+            <li>
+              Tekan tombol Windows, ketik "env", pilih "Edit the system
+              environment variables".
+            </li>
+            <li>Klik tombol <strong>Environment Variables</strong>.</li>
+            <li>
+              Di kotak bagian bawah (System variables), cari tulisan "Path",
+              lalu klik Edit.
+            </li>
+            <li>
+              Klik New, lalu masukkan alamat folder bin flutter kamu (Contoh:
+              <code>C:\src\flutter\bin</code>).
+            </li>
+            <li>Klik OK, OK, dan OK.</li>
+          </ul>
+          <img
+            src="../images/flutter/2.png"
+            alt="Setting Environment Variables"
+            class="step-image"
+          />
+        </div>
+
+        <div class="step">
+          <h2>
+            <span class="step-number">3</span> Cek Kesehatan (Flutter Doctor)
+          </h2>
+          <p>Buka Terminal baru (CMD atau PowerShell). Ketik:</p>
           <pre><code>flutter doctor</code></pre>
           <p>
-            Perintah ini akan mengecek dependensi yang kurang. Ikuti instruksi
-            yang muncul (misal: install Android Studio, setujui lisensi Android
-            SDK).
+            Tunggu prosesnya. Dia akan mengecek apakah Android Studio, Chrome,
+            dan VS Code sudah siap.
+            <br />
+            <em
+              >Note: Kalau ada tanda silang [x] di Android Toolchain, biasanya
+              karena belum install "Android SDK Command-line Tools" di Android
+              Studio.</em
+            >
           </p>
           <img
-            src="../images/flutter-3-doctor.png"
-            alt="Output Flutter Doctor"
+            src="../images/flutter/3.png"
+            alt="Hasil Flutter Doctor"
             class="step-image"
           />
         </div>
 
         <div class="step">
-          <h2><span class="step-number">4</span> Install Plugin VS Code</h2>
+          <h2><span class="step-number">4</span> Setup Visual Studio Code</h2>
           <p>
-            Buka VS Code, masuk ke tab Extensions, cari dan install ekstensi
-            <strong>Flutter</strong> (ini akan otomatis menginstall ekstensi
-            Dart).
+            Buka VS Code. Ke menu Extension (kotak-kotak di kiri), cari dan
+            install:
           </p>
+          <ul
+            class="list-disc"
+            style="margin-left: 1.5rem; margin-bottom: 1rem"
+          >
+            <li><strong>Flutter</strong> (Official by Dart Code)</li>
+            <li><strong>Dart</strong> (Otomatis terinstall)</li>
+          </ul>
+          <p>Restart VS Code kamu.</p>
           <img
-            src="../images/flutter-4-vscode.png"
-            alt="Ekstensi Flutter di VS Code"
+            src="../images/flutter/4.png"
+            alt="Install Extension Flutter"
             class="step-image"
           />
         </div>
 
         <div class="step">
-          <h2><span class="step-number">5</span> Membuat Project Baru</h2>
+          <h2>
+            <span class="step-number">5</span> Membuat Project Hello World
+          </h2>
           <p>
-            Di VS Code, tekan <code>Ctrl+Shift+P</code> (Command Palette), ketik
-            "Flutter: New Project", pilih "Application", lalu pilih folder
-            penyimpanan dan beri nama project <code>helloworld</code>.
+            Berbeda dengan React Native, nama project Flutter tidak boleh pakai
+            huruf besar atau spasi. Harus <code>snake_case</code>.
           </p>
+          <p>
+            Buka Terminal di VS Code (Ctrl + J) atau terminal biasa. Ketik
+            perintah:
+          </p>
+          <pre><code>flutter create hello_world</code></pre>
+          <p>Tunggu selesai, lalu masuk folder:</p>
+          <pre><code>cd hello_world</code></pre>
           <img
-            src="../images/flutter-5-new.png"
-            alt="Membuat project Flutter baru"
+            src="../images/flutter/5.png"
+            alt="Membuat project Flutter"
             class="step-image"
           />
         </div>
 
         <div class="step">
-          <h2><span class="step-number">6</span> Menjalankan Aplikasi</h2>
+          <h2><span class="step-number">6</span> Coding Hello World</h2>
           <p>
-            Buka <code>lib/main.dart</code>. Ubah kode sesuai kebutuhan atau
-            biarkan default counter app. Pilih device di status bar kanan bawah,
-            lalu tekan F5 untuk debug.
+            Buka folder <code>hello_world</code> di VS Code. Buka file
+            <code>lib/main.dart</code>.
+          </p>
+          <p>
+            Hapus SEMUA isinya, ganti dengan kode simpel ini (supaya benar-benar
+            Hello World bersih):
           </p>
           <pre><code>import 'package:flutter/material.dart';
 
@@ -122,15 +178,43 @@ class MainApp extends StatelessWidget {
     return const MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Text('Hello World!'),
+          child: Text(
+            'Hello World! Ini Flutter.',
+            style: TextStyle(fontSize: 24),
+          ),
         ),
       ),
     );
   }
 }</code></pre>
+          <p>Simpan (Save).</p>
+        </div>
+
+        <div class="step">
+          <h2><span class="step-number">7</span> Run Aplikasi</h2>
+          <p>Kamu punya 2 pilihan untuk menjalankan:</p>
+          <ul
+            class="list-disc"
+            style="margin-left: 1.5rem; margin-bottom: 1rem"
+          >
+            <li>
+              <strong>Pilihan A (Chrome/Web):</strong> Paling ringan buat
+              screenshot desktop. Ketik di terminal:
+              <code>flutter run -d chrome</code>
+            </li>
+            <li>
+              <strong>Pilihan B (Android Emulator):</strong> Kalau kamu sudah
+              setup Android Studio. Buka Emulator dulu, lalu ketik:
+              <code>flutter run</code>
+            </li>
+          </ul>
+          <p>
+            Tunggu build selesai. Nanti akan muncul aplikasi putih dengan
+            tulisan "Hello World! Ini Flutter." di tengah.
+          </p>
           <img
-            src="../images/flutter-6-run.png"
-            alt="Aplikasi Flutter berjalan"
+            src="../images/flutter/7.png"
+            alt="Hasil Running Aplikasi"
             class="step-image"
           />
         </div>

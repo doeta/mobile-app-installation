@@ -13,7 +13,7 @@ function injectNavbar() {
   const navHtml = `
     <nav class="navbar">
         <div class="container">
-            <a href="${basePath}index.html" class="logo">Dips</a>
+            <a href="${basePath}index.html" class="logo">DUTA</a>
             <ul class="nav-links">
                 <li><a href="${basePath}index.html" data-page="index.html">Home</a></li>
                 <li><a href="${pagesPath}about.html" data-page="about.html">About</a></li>
