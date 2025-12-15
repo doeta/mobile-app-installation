@@ -15,52 +15,50 @@
   <body>
     <!-- Navbar injected by script.js -->
 
-    <main
-      class="container"
-      style="
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-        min-height: 80vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      "
-    >
-      <section
-        class="about-section"
-        style="
-          margin: 0;
-          border: none;
-          background: var(--card-bg);
-          padding: 3rem;
-          border-radius: var(--radius);
-          box-shadow: var(--shadow-lg);
-          width: 100%;
-          max-width: 800px;
-        "
-      >
+    <main class="about-container">
+      <article class="about-card">
+        <div class="about-header-bg"></div>
+
+        <div class="about-avatar-wrapper">
+          <!-- Placeholder image, user can replace src with their own image -->
+          <img
+            src="../images/profile.jpg"
+            alt="Profile Picture"
+            class="about-avatar-img"
+            id="profileImage"
+          />
+        </div>
+
         <div class="about-content">
-          <div class="about-avatar">
-            <span>👨‍💻</span>
-          </div>
-          <h2>Duta Adi Pamungkas</h2>
-          <span class="nim">NIM: 24060123140174</span>
-          <p>Disusun untuk memenuhi tugas Pemrograman Berbasis Platform.</p>
+          <h1 class="about-name">Duta Adi Pamungkas</h1>
           <hr
             style="
-              margin: 2rem 0;
               border: 0;
               border-top: 1px solid var(--border-color);
+              margin: 2rem auto;
+              max-width: 200px;
             "
           />
-          <p style="margin-top: 1rem">
-            Website ini dibuat sebagai panduan komprehensif bagi mahasiswa dan
-            pengembang pemula yang ingin memulai perjalanan mereka dalam
-            pengembangan aplikasi mobile. Mencakup instalasi dan konfigurasi
-            dasar untuk berbagai platform populer.
+
+          <p class="about-bio">
+            Website ini dirancang sebagai panduan komprehensif bagi mahasiswa
+            dan pengembang pemula yang ingin memulai perjalanan di dunia
+            aplikasi mobile. Selain berbagi ilmu, proyek ini dikembangkan secara
+            khusus untuk memenuhi tugas mata kuliah Pengembangan Berbasis
+            Platform (PBP) pada Program Studi S1 Informatika, Universitas
+            Diponegoro (UNDIP)
           </p>
+
+          <div class="social-links">
+            <a href="https://github.com/doeta" class="social-btn">
+              <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/dutaadips" class="social-btn">
+              <span>LinkedIn</span>
+            </a>
+          </div>
         </div>
-      </section>
+      </article>
     </main>
 
     <footer>
