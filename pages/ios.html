@@ -18,7 +18,7 @@
     <main class="container section">
       <article class="tutorial-content">
         <header class="tutorial-header">
-          <h1>Instalasi XCode & Project HelloWorld</h1>
+          <h1>Tutorial Dasar: Setup Xcode dan Membuat App iOS Pertama</h1>
           <div class="tutorial-meta">
             <span>Platform: iOS (Swift)</span> &bull;
             <span>Syarat: macOS</span>
@@ -26,84 +26,123 @@
         </header>
 
         <div class="step">
-          <h2><span class="step-number">1</span> Download XCode</h2>
+          <h2>
+            <span class="step-number">1</span> Persiapan Lingkungan Kerja
+            (Xcode)
+          </h2>
           <p>
-            Buka <strong>App Store</strong> di Mac Anda dan cari "Xcode". Klik
-            tombol <strong>Get</strong> atau <strong>Install</strong>. Ukurannya
-            cukup besar (lebih dari 10GB), jadi pastikan koneksi internet Anda
-            stabil.
+            Langkah pertama adalah mendapatkan IDE resmi dari Apple, yaitu
+            Xcode.
           </p>
+          <ol>
+            <li>
+              <strong>Unduh dari App Store:</strong> Buka App Store di Mac kamu,
+              cari "Xcode", dan klik tombol "Get" atau "Install". Pastikan
+              koneksi internet stabil karena ukurannya cukup besar.
+            </li>
+            <li>
+              <strong>Instalasi Awal:</strong> Setelah selesai diunduh, buka
+              Xcode. Kamu akan diminta menyetujui lisensi ("Agree") dan
+              memasukkan password Mac untuk menginstal komponen tambahan
+              (Command Line Tools, dll).
+            </li>
+            <li>
+              <strong>Tunggu Prosesnya:</strong> Biarkan Xcode menyelesaikan
+              instalasi komponen pendukungnya sampai jendela "Welcome to Xcode"
+              muncul.
+            </li>
+          </ol>
           <img
-            src="../images/ios-1-appstore.png"
+            src="../images/ios/1.png"
             alt="XCode di App Store"
             class="step-image"
           />
         </div>
 
         <div class="step">
-          <h2>
-            <span class="step-number">2</span> Instalasi Komponen Tambahan
-          </h2>
-          <p>
-            Setelah selesai diunduh, buka XCode. Saat pertama kali dibuka, XCode
-            akan meminta izin untuk menginstal komponen tambahan. Masukkan
-            password Mac Anda dan biarkan proses selesai.
-          </p>
+          <h2><span class="step-number">2</span> Memulai Project Baru</h2>
+          <p>Setelah Xcode siap, mari kita buat aplikasi pertama.</p>
+          <ol>
+            <li>
+              <strong>Create New Project:</strong> Pada layar sambutan, pilih
+              opsi "Create a new Xcode project".
+            </li>
+            <li>
+              <strong>Pilih Template:</strong> Masuk ke tab
+              <strong>iOS</strong>, lalu pilih template <strong>App</strong>.
+              Klik Next untuk melanjutkan.
+            </li>
+          </ol>
           <img
-            src="../images/ios-2-components.png"
-            alt="Instalasi Komponen XCode"
+            src="../images/ios/2.png"
+            alt="Welcome to Xcode Screen"
             class="step-image"
           />
-        </div>
-
-        <div class="step">
-          <h2><span class="step-number">3</span> Membuat Project Baru</h2>
-          <p>
-            Di layar Welcome to Xcode, pilih
-            <strong>Create a new Xcode project</strong>.
-          </p>
           <img
-            src="../images/ios-3-welcome.png"
+            src="../images/ios/3.png"
             alt="Welcome to Xcode Screen"
             class="step-image"
           />
         </div>
 
         <div class="step">
-          <h2><span class="step-number">4</span> Memilih Template</h2>
+          <h2><span class="step-number">3</span> Pengaturan Awal Project</h2>
+          <p>Isi identitas aplikasi yang akan kamu buat:</p>
+          <ul>
+            <li><strong>Product Name:</strong> HelloWorld (Nama aplikasi).</li>
+            <li>
+              <strong>Team:</strong> Pilih "None" jika belum punya akun
+              developer, atau pilih akun personal kamu.
+            </li>
+            <li>
+              <strong>Organization Identifier:</strong> Biasanya format domain
+              terbalik, contoh: <code>com.namakamu</code>.
+            </li>
+            <li>
+              <strong>Interface:</strong> Pilih
+              <strong>SwiftUI</strong> (Framework UI modern Apple).
+            </li>
+            <li><strong>Language:</strong> Pilih <strong>Swift</strong>.</li>
+          </ul>
           <p>
-            Pilih tab <strong>iOS</strong>, lalu pilih <strong>App</strong> di
-            bagian Application. Klik Next.
+            Klik Next, lalu tentukan folder penyimpanan project di Mac kamu.
+            Klik Create untuk menyelesaikan setup.
           </p>
           <img
-            src="../images/ios-4-template.png"
-            alt="Pilih Template App iOS"
-            class="step-image"
-          />
-        </div>
-
-        <div class="step">
-          <h2><span class="step-number">5</span> Konfigurasi Project</h2>
-          <p>Isi detail project:</p>
-          <ul>
-            <li><strong>Product Name:</strong> HelloWorld</li>
-            <li><strong>Organization Identifier:</strong> com.example</li>
-            <li><strong>Interface:</strong> SwiftUI (atau Storyboard)</li>
-            <li><strong>Language:</strong> Swift</li>
-          </ul>
-          <img
-            src="../images/ios-5-config.png"
+            src="../images/ios/4.png"
             alt="Konfigurasi Project iOS"
             class="step-image"
           />
         </div>
 
         <div class="step">
-          <h2><span class="step-number">6</span> Menjalankan Aplikasi</h2>
+          <h2>
+            <span class="step-number">4</span> Eksplorasi Workspace & Running
+            App
+          </h2>
           <p>
-            XCode akan membuka editor. Di file <code>ContentView.swift</code>,
-            Anda akan melihat kode SwiftUI default. Pilih Simulator (misal
-            iPhone 15) di bagian atas, lalu klik tombol <strong>Play</strong>.
+            Jangan bingung dengan tampilan Xcode. Fokus pada tiga bagian utama
+            ini:
+          </p>
+          <ul>
+            <li>
+              <strong>Navigator (Kiri):</strong> Menampilkan file-file project
+              kamu.
+            </li>
+            <li>
+              <strong>Editor (Tengah):</strong> Area tempat kamu menulis kode
+              (coding).
+            </li>
+            <li>
+              <strong>Canvas (Kanan):</strong> Menampilkan preview tampilan
+              aplikasi secara real-time.
+            </li>
+          </ul>
+
+          <h3>Bedah Kode (ContentView.swift)</h3>
+          <p>
+            File utama yang terbuka adalah <code>ContentView.swift</code>.
+            Isinya kurang lebih seperti ini:
           </p>
           <pre><code>import SwiftUI
 
@@ -118,8 +157,17 @@ struct ContentView: View {
         .padding()
     }
 }</code></pre>
+
+          <h3>Menjalankan Aplikasi</h3>
+          <p>
+            Lihat ke panel Canvas di sebelah kanan. Jika preview tidak muncul,
+            klik tombol "Resume". Kamu akan melihat simulasi iPhone menampilkan
+            teks "Hello, world!". Kamu juga bisa klik tombol
+            <strong>Play</strong> (▶️) di pojok kiri atas untuk menjalankan
+            simulator penuh.
+          </p>
           <img
-            src="../images/ios-6-run.png"
+            src="../images/ios/5.png"
             alt="Simulator iPhone menjalankan HelloWorld"
             class="step-image"
           />
